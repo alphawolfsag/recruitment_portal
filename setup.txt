@@ -1,0 +1,71 @@
+Hi, so to make this app run on your computer you will need the following only.
+
+Node.js :
+MySQL Workbench :
+gitbash :
+
+Video Tutorials for setting up Node:
+
+
+--------------------Create DB -----------------------------
+create a schema of your called :job_applicants
+then  you can make your password : 1234
+
+
+then create this table by entering the below sql query
+
+
+
+
+CREATE TABLE `job_applicants`.`applicants` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `fullname` VARCHAR(500) NULL,
+  `email` VARCHAR(500) NULL,
+  `nID` VARCHAR(500) NULL,
+  `address` VARCHAR(500) NULL,
+  `call_phone` VARCHAR(45) NULL,
+  `position` VARCHAR(55) NULL,
+  `education` VARCHAR(705) NULL,
+  `otherQ` VARCHAR(1000) NULL,
+  `abt_yourself` VARCHAR(1005) NULL,
+  `refes` VARCHAR(1000) NULL,
+  PRIMARY KEY (`id`));
+
+
+
+--------------------------------------------------
+
+
+
+
+
+
+
+
+after setting up these and also assuming you have already cloned the 
+git project to your PC, using your gitbash terminal / command prompt go to
+the folder containing this project then execute the command :
+
+node app.js
+
+
+after a while if all is okay on your pc 
+you will see this displayed:
+
+---------------------------------------------
+$ node app.js
+ Test port 4000 on localhost
+recruitment_portal v1 server is now online ...
+
+----------------------------------------------
+
+after seeing this go to your web browser then type in:
+
+localhost:4000
+
+this will then show your application.
+
+
+
+
+

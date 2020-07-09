@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Application Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/explorer/register_wizard/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <!-- <link rel="stylesheet" href="/fontawesome/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="/explorer/semantic/semantic.css">
+    <link rel="stylesheet" href="/explorer/semantic/components/popup.css"> -->
+    <link rel="stylesheet" href="/explorer/semantic/semantic.css">
+    <link rel="stylesheet" href="/explorer/css/fontawesome.css">
+    <link rel="stylesheet" href="/explorer/register_wizard/css/style.css">
+</head>
+
+<body>
+
+    <style>
+        .actions ul li a {
+            width: 150px;
+            height: 50px;
+            color: #fff;
+            background: #2185d0;
+            align-items: center;
+            -moz-align-items: center;
+            -webkit-align-items: center;
+            -o-align-items: center;
+            -ms-align-items: center;
+            justify-content: center;
+            -moz-justify-content: center;
+            -webkit-justify-content: center;
+            -o-justify-content: center;
+            -ms-justify-content: center;
+            text-decoration: none;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -o-border-radius: 5px;
+            -ms-border-radius: 5px;
+        }
+        
+        .steps ul .done a {
+            color: #2185d0;
+        }
+        
+        .steps ul .done a .number {
+            position: relative;
+            font-size: 0px;
+            border: 2px solid #2185d0;
+        }
+        
+        .steps ul .done a .number:after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            font-size: 14px;
+            color: #2185d0;
+            font-family: 'Material-Design-Iconic-Font';
+            content: '\f26b';
+            font-weight: bold;
+        }
+    </style>
+
+
+
+    <div class="main">
+
+        <div class="container">
+            <h2>Application Form</h2>
+            <form method="POST" action="/registertest" id="signup-form" class="signup-form">
+                <h3>
+                    <span class="title_text">Personal Infomation</span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                        <div class="form-group">
+                            <label for="fullname" class="form-label">Your Full Name</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Mr/Mrs/Ms/Miss/Dr/Prof" />
+                        </div>
+                        <div class="form-group">
+                            <label for="nID" class="form-label">National ID</label>
+                            <input type="text" name="nID" id="nID" placeholder="Your ID" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Adress</label>
+                            <input type="email" name="email" id="email" placeholder="Your Email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="address" class="form-label">Home Address</label>
+                            <input type="text" name="address" id="address" placeholder="Your Physical Address" />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone_number" class="form-label">Contact Number</label>
+                            <input type="number" name="phone_number" id="phone_number" placeholder="Cell Number" />
+                        </div>
+
+
+                    </div>
+                    <div class="fieldset-footer">
+                        <span>Step 1 of 3</span>
+                    </div>
+                </fieldset>
+
+                <h3>
+                    <span class="title_text">Qualifications</span>
+                </h3>
+                <fieldset>
+
+                    <div class="fieldset-content">
+                        
+
+
+                        <div class="form-select">
+                            <label for="Position" class="form-label">Position</label>
+                            <select name="Position" id="Position">
+                                <option value=""> Select The Position To Apply For </option>
+
+                                <option value="Nurse">Nurse</option>
+                                <option value="GP">GP Doctor</option>
+                                <option value="Sp">Specialist Dr</option>
+                                <option value="Pham">Pharmacy Technician</option>
+                                <option value="Therapist">Therapist</option>
+                                <option value="Phy">Physician</option>
+                                <option value="NS">Nursing Assistant</option>
+                                <option value="MA">Medical Assistant</option>
+                               
+                                <option value="none">None Of the Above</option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-select">
+                            <label for="education" class="form-label">My Qualifications</label>
+                            <select name="education" id="education">
+                                <option value=""> Select Your Qualification </option>
+
+                                <option value="none">None Of the Below</option>
+
+                                <option value="1">Bachelor of Medical Laboratory Sciences Honours Degree (HBMLS)</option>
+                                <option value="2">Bachelor of Science Honours Degree in Occupational Therapy (BSc OT Hons)</option>
+                                <option value="3">Bachelor of Science Honours Degree in Physiotherapy (BSc PT Hons) </option>
+                                <option value="4">Bachelor of Science Honours Degree in Nursing Science (BSc N Hons</option>
+                                <option value="5">Bachelor of Dental Surgery (BDS) </option>
+                                <option value="6">Bachelor of Medicine and Bachelor of Surgery Degrees (MBChB)</option>
+                                <option value="7">PhD of Science Honours in Physiotherapy (BSc PT Hons)</option>
+                                <option value="8">Bachelor of Pharmacy Honours (BPharm.</option>
+                                <option value="9">Bachelor of Science Honours Degree in Nursing Science (BSc N Hons</option>
+                                <option value="10">Bachelor of Dental Surgery (BDS) </option>
+                                <option value="11">Bachelor of Science Honours Degree in Occupational Therapy (BSc OT Hons)</option>
+                                <option value="12">Bachelor of Science Honours Degree in Physiotherapy (BSc PT Hons) </option>
+                                <option value="14">Bachelor of Science Honours Degree in Nursing Science (BSc N Hons</option>
+                                <option value="15">Bachelor of Dental Surgery (BDS) </option>
+                                <option value="16">Bachelor of Medicine and Bachelor of Surgery Degrees (MBChB)</option>
+                                <option value="17">PhD of Science Honours in Physiotherapy (BSc PT Hons)</option>
+                                <option value="18">Bachelor of Pharmacy Honours (BPharm.</option>
+                                <option value="19">Bachelor of Science Honours Degree in Nursing Science (BSc N Hons</option>
+                                <option value="110">Bachelor of Dental Surgery (BDS) </option>
+                                <option value="21">Bachelor of Medical Laboratory Sciences Honours Degree (HBMLS)</option>
+                                <option value="32">Bachelor of Science Honours Degree in Occupational Therapy (BSc OT Hons)</option>
+                                <option value="53">Bachelor of Science Honours Degree in Physiotherapy (BSc PT Hons) </option>
+                                <option value="44">Bachelor of Science Honours Degree in Nursing Science (BSc N Hons</option>
+                                <option value="45">Bachelor of Dental Surgery (BDS) </option>
+                                <option value="46">Bachelor of Medicine and Bachelor of Surgery Degrees (MBChB)</option>
+                                <option value="47">PhD of Science Honours in Physiotherapy (BSc PT Hons)</option>
+                                <option value="48">Bachelor of Pharmacy Honours (BPharm.</option>
+                                <option value="49">Bachelor of Science Honours Degree in Nursing Science (BSc N Hons</option>
+                                <option value="410">Bachelor of Dental Surgery (BDS) </option>
+                                <option value="411">Bachelor of Science Honours Degree in Occupational Therapy (BSc OT Hons)</option>
+                                <option value="412">Bachelor of Science Honours Degree in Physiotherapy (BSc PT Hons) </option>
+                                <option value="414">Bachelor of Science Honours Degree in Nursing Science (BSc N Hons</option>
+                                <option value="415">Bachelor of Dental Surgery (BDS) </option>
+                                <option value="416">Bachelor of Medicine and Bachelor of Surgery Degrees (MBChB)</option>
+                                <option value="417">PhD of Science Honours in Physiotherapy (BSc PT Hons)</option>
+                                <option value="418">Bachelor of Pharmacy Honours (BPharm.</option>
+                                <option value="419">Bachelor of Science Honours Degree in Nursing Science (BSc N Hons</option>
+                                <option value="4110">Bachelor of Dental Surgery (BDS) </option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-textarea">
+                            <label for="otherQ" class="form-label">Additional Info &amp; Qualifications </label>
+                            <textarea name="otherQ" id="otherQ" placeholder=""></textarea>
+                        </div> 
+                       
+                   
+
+
+                    </div>
+
+                    <div class="fieldset-footer">
+                        <span>Step 2 of 3</span>
+                    </div>
+
+                </fieldset>
+
+                <h3>
+                    <span class="title_text">Other Personal Details</span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+
+                       
+                        
+
+                        <div class="form-textarea">
+                            <label for="yourself" class="form-label">Tell Us About Your Self</label>
+                            <textarea name="yourself" id="yourself" placeholder="Who are you and what are your goals..."></textarea>
+                        </div>
+
+
+
+                        <div class="form-textarea">
+                            <label for="refes" class="form-label">References</label>
+                            <textarea name="refes" id="refes" placeholder=""></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="fieldset-footer">
+                        <span>Step 3 of 3</span>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- /end of Modals for errors -->
+    </div>
+
+
+
+
+
+
+
+
+    <!-- JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script> -->
+    <script src="/explorer/register_wizard/vendor/jquery/jquery.min.js"></script>
+    <script src="/explorer/register_wizard/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/explorer/register_wizard/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="/explorer/register_wizard/vendor/jquery-steps/jquery.steps.min.js"></script>
+    <script src="/explorer/register_wizard/vendor/minimalist-picker/dobpicker.js"></script>
+    <script src="/explorer/register_wizard/vendor/jquery.pwstrength/jquery.pwstrength.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <link rel="stylesheet" href="/fontawesome/js/fontawesome.min.js">
+
+
+
+
+
+
+    <script src="/explorer/register_wizard/js/main.js"></script>
+</body>
+
+</html>

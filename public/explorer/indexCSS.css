@@ -1,0 +1,87 @@
+.banner-content h1 {
+    color: #f9f9ff;
+    font-size: 50px;
+}
+
+.banner-content p {
+    color: #f7941d;
+    max-width: 610px;
+    margin: auto;
+}
+
+
+
+.banner-content .input-wrap .search-btn{
+    background: -webkit-linear-gradient(90deg,#d0c113 0%, #ffc20c 100%);
+    background: -moz-linear-gradient(90deg, #d0c113 0%, #ffc20c 100%);
+    background: -o-linear-gradient(90deg, #d0c113 0%, #ffc20c 100%);
+    background: -ms-linear-gradient(90deg, #d0c113 0%, #ffc20c 100%);
+    background: linear-gradient(90deg, #d0c113 0%, #ffc20c 100%);
+
+}
+
+.primary-btn.transparent {
+    background: #f8f9fa4a;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #fff;
+    border-radius: 0px;
+    padding: 0 18px;
+    font-size: 12px;
+    color: #2a303b;
+}
+
+
+.orange-text {
+    color: #f8f9fa;
+    font-size: 30px;
+}
+
+.section-gap {
+    padding: 60px 0;
+}
+
+
+.feature-area {
+    padding: 10px 0px;
+}
+
+
+#scrollUp {
+    position: fixed;
+    right: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    background-color: #f7941d;
+    color: #ffffff;
+    text-align: center;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
+    box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
+    z-index: 15962536;
+}
+
+
+
+.p1-gradient-bg, .primary-btn, .primary-btn.white:hover, .banner-content .input-wrap .search-btn, .courses-list li:hover, .testimonials-area .owl-thumb-item.active .overlay-grad, .testimonials-area .owl-thumb-item .overlay-grad:hover, .top-category-widget-area .single-cat-widget:hover .overlay-bg, .post-content-area .single-post .primary-btn:hover, .blog-pagination .page-item.active .page-link, .blog-pagination .page-link:hover, .widget-wrap .newsletter-widget .bbtns, .footer-area .single-footer-widget .click-btn, .footer-area .footer-bottom .footer-social a:hover {
+    background: -webkit-linear-gradient(90deg,  #f9be37 0%, #ffc107 100%);
+    background: -moz-linear-gradient(90deg,  #f9be37 0%, #ffc107 100%);
+    background: -o-linear-gradient(90deg,  #f9be37 0%, #ffc107 100%);
+    background: -ms-linear-gradient(90deg, #f9be37 0%, #ffc107 100%);
+    background: linear-gradient(90deg, #f9be37 0%, #ffc107 100%);
+}
+
+
+.nav-menu li:hover > a, .nav-menu > .menu-active > a {
+    color: #ffc107;
+}
+
+#header.header-scrolled .nav-menu li:hover > a, #header.header-scrolled .nav-menu > .menu-active > a {
+    color: #ffc107;
+}
