@@ -1,0 +1,19 @@
+{
+  "name": "recruitment_portal",
+  "version": "1.0.0",
+  "description": "This is a web based portal for recruitment in an intitution\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dstitution",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphawolfsag/recruitment_portal.git"
+  },
+  "author": "alphawolfsag, Tino Mazhakata",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/alphawolfsag/recruitment_portal/issues"
+  },
+  "homepage": "https://github.com/alphawolfsag/recruitment_portal#readme"
+}
