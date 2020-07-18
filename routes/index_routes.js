@@ -61,7 +61,7 @@ router.post('/recruitform', function(req, res) {
    var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '1234',
+    password: 'Ru7H%cLirrel',
     database: 'job_applicants'
 });
 
@@ -98,11 +98,7 @@ var queryLine = "INSERT INTO applicants (fullname,email, nID,address ,call_phone
 
             });
 
-
-
-   
-        
-        res.render('recruitform',{recPostion:recPostion});
+       // res.render('recruitform',{recPostion:recPostion});
     });
 
 
@@ -118,7 +114,7 @@ var queryLine = "INSERT INTO applicants (fullname,email, nID,address ,call_phone
 
     router.post('/login', function(req, res) {
         // get recruitment position
-        var recPostion =  req.param("position");
+        //var recPostion =  req.param("position");
         //render recruitform
             
             res.redirect('/hr-dash');
@@ -133,7 +129,7 @@ var queryLine = "INSERT INTO applicants (fullname,email, nID,address ,call_phone
         var connection = mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: '1234',
+            password: 'Ru7H%cLirrel',
             database: 'job_applicants'
         });  
 

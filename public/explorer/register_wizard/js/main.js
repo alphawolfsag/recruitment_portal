@@ -64,8 +64,8 @@
                     if(data ===">ok") {
                   //  location.href = "/panapa-login";
                   console.log("about to show the modal");
-                  msgFrom = 'Application Form Successfull';
-                  msgTitle="Welcome To Panapa";
+                  msgFrom = 'Application Form Successfully Sent';
+                  msgTitle="Successful";
                     }else{
 
                       if(data ==='ER_DUP_ENTRY') {
@@ -93,7 +93,8 @@
 
                 buttons: {
                       
-                       close: function () {
+                       done: function () {
+                        location.href = "/";
                        }
                    },
                    backgroundDismiss: false,

@@ -15,7 +15,7 @@ then  you can make your password : 1234
 then create this table by entering the below sql query
 
 
-
+CREATE SCHEMA `job_applicants` ;
 
 CREATE TABLE `job_applicants`.`applicants` (
   `id` INT NOT NULL AUTO_INCREMENT,
