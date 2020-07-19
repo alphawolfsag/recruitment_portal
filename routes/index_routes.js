@@ -61,7 +61,7 @@ router.post('/recruitform', function(req, res) {
    var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Ru7H%cLirrel',
+    password: '1234',
     database: 'job_applicants'
 });
 
@@ -129,7 +129,7 @@ var queryLine = "INSERT INTO applicants (fullname,email, nID,address ,call_phone
         var connection = mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: 'Ru7H%cLirrel',
+            password: '1234',
             database: 'job_applicants'
         });  
 
