@@ -90,9 +90,10 @@
                             <label for="fullname" class="form-label">Your Full Name</label>
                             <input type="text" name="fullname" id="fullname" placeholder="Mr/Mrs/Ms/Miss/Dr/Prof" />
                         </div>
+                       
                         <div class="form-group">
-                            <label for="nID" class="form-label">National ID</label>
-                            <input type="text" name="nID" id="nID" placeholder="Your ID" />
+                            <label for="nID" class="form-label">Age</label>
+                            <input type="number" name="age" id="age" placeholder="Your Age" />
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">Email Adress</label>
@@ -110,12 +111,12 @@
 
                     </div>
                     <div class="fieldset-footer">
-                        <span>Step 1 of 3</span>
+                        <span>Step 1 of 4</span>
                     </div>
                 </fieldset>
 
                 <h3>
-                    <span class="title_text">Qualifications</span>
+                    <span class="title_text">Position</span>
                 </h3>
                 <fieldset>
 
@@ -202,13 +203,69 @@
                     </div>
 
                     <div class="fieldset-footer">
-                        <span>Step 2 of 3</span>
+                        <span>Step 2 of 4</span>
                     </div>
 
                 </fieldset>
+                <h3>
+                    <span class="title_text">Basic Education</span>
+                </h3>
+                <fieldset>
+                    <div class="fieldset-content">
+                      
+                        <div class="form-group">
+                            <label for="nID" class="form-label">Number of 'O' Level Passes</label>
+                            <input type="number" name="numOlevel" id="numOlevel" placeholder="How Many Subjects Did You Pass For O Level" />
+                        </div>
+                       
+                        <div class="form-select">
+                            <label for="mathPass" class="form-label">O Level Mathematics</label>
+                            <select name="mathPass" id="mathPass">
+                                <option value=""> Select The Symbol You Have  </option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                            </select>
+                        </div>
+                        <div class="form-select">
+                            <label for="engPass" class="form-label">O Level English</label>
+                            <select name="engPass" id="engPass">
+                                <option value=""> Select The Symbol You Have  </option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                            </select>
+                        </div>
+
+                        <div class="form-select">
+                            <label for="sciencePass" class="form-label">O Level Any Science Subject</label>
+                            <select name="sciencePass" id="sciencePass">
+                                <option value=""> Select The Symbol You Have  </option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                            </select>
+                        </div>
+                       
+
+                    </div>
+
+                    <div class="fieldset-footer">
+                        <span>Step 3 of 4</span>
+                    </div>
+                </fieldset>
 
                 <h3>
-                    <span class="title_text">Other Personal Details</span>
+                    <span class="title_text">Extra</span>
                 </h3>
                 <fieldset>
                     <div class="fieldset-content">
@@ -231,7 +288,7 @@
                     </div>
 
                     <div class="fieldset-footer">
-                        <span>Step 3 of 3</span>
+                        <span>Step 4 of 4</span>
                     </div>
                 </fieldset>
             </form>

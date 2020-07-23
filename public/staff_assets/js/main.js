@@ -1932,25 +1932,24 @@ $('#viewEvent').click(function () {
 });
 //==================================================================
 
-$('#acceptEvent').click(function () {
-  var eventId = this.name;
+$('#sendemail').click(function () {
+ // var eventId = this.name;
 
   $.confirm({
     content: function () {
         var self = this;
         return $.ajax({
-      type: "POST",
-      url: "/panapastaff/hidden/acceptEvent",
-      data: {"eventId":eventId}, // serializes the form's elements.
+      type: "GET",
+      url: "/send/<%=company.email%>",
       success: function(data)
       {
        console.log("Done");
        
       }
     }).done(function (response) {
-            self.setContent("Accoun Has Been Activated");
+            self.setContent("Email To Invite Sent");
           //  self.setContentAppend('<br>Version: ' + response.version);
-            self.setTitle("Account Suspnsion");
+            self.setTitle("Email Sent");
         }).fail(function(){
             self.setContent('Sorry, Something Really Went Wrong. Please Try Again');
             self.setTitle("Failed");

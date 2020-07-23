@@ -177,13 +177,12 @@
                                                 <nav>
                                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
-                                                         aria-selected="true">New Applications
+                                                         aria-selected="true">Best Applications
                                                          <span class="badge badge-danger"><%=allusers.lenght%></span>
                                                         </a>
                                                         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
-                                                         aria-selected="false">Approved Applications</a>
-                                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
-                                                         aria-selected="false">Suspended Applications</a>
+                                                         aria-selected="false">All Applications</a>
+                                                       
                                                     </div>
                                                 </nav>
                                                 <div class="tab-content pl-3 pt-2" id="nav-tabContent">
@@ -196,7 +195,7 @@
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <!-- DATA TABLE -->
-                                                            <h3 class="title-5 m-b-35">New Users</h3>
+                                                            <h3 class="title-5 m-b-35">Best Points Applications</h3>
                                                            
                                                             <div class="table-responsive table-responsive-data2">
                                                                 <table class="table table-data2">
@@ -207,7 +206,7 @@
                                                                             <th>email</th>
                                                                             <th>Position</th>
                                                                             
-                                                                            <th>Profile Verified</th>
+                                                                            <th>Points</th>
                                                                             
                                                                             <th></th>
                                                                         </tr>
@@ -216,7 +215,7 @@
 
                                                                         <% allusers.forEach(function(company){ %>
 
-                                                                           
+                                                                           <% if(company.points_acceptable > 60){ %>
                                                                                 <tr class="tr-shadow">
                                                                             
                                                                                     <td><%=company.fullname%></td>
@@ -228,7 +227,7 @@
 
                                                                                   
                                                                                     <td>
-                                                                                        <span class="status--denied">False</span>
+                                                                                        <span class="status--process"><%= company.points_acceptable%></span>
                                                                                     </td>
                                                                                   
                                                                                    
@@ -240,9 +239,8 @@
                                                                                                 <i class="zmdi zmdi-star"></i>
                                                                                                
                                                                                             </button>
-                                                                                            <button id="changeCat" class="item" data-toggle="tooltip" data-placement="top" title="Edit Position">
+                                                                                            <button id="sendemail" class="item" data-toggle="tooltip" data-placement="top" title="Send Email">
                                                                                                 <i class="zmdi zmdi-edit"></i>
-                                                                                               
                                                                                             </button>
                                                                                             <button id="suspendacc" class="item" data-toggle="tooltip" data-placement="top" title="Suspend">
                                                                                                 <i class="zmdi zmdi-pause"></i>
@@ -250,7 +248,7 @@
                                                                                             </button>
                                                                                             <button class="item" data-toggle="tooltip" data-placement="top" title="View Profile">
                                                                                                 <i class="zmdi zmdi-eye"></i>
-                                                                                                <a href="/explore/viewpage/view/<%=company.email%>"></a>
+                                                                                                <!-- <a href="/view/<%=company.email%>"></a> -->
                                                                                             </button>
                                                                                           
                                                                                         </div>
@@ -259,7 +257,7 @@
                                                                                 <tr class="spacer"></tr>
 
 
-                                                                         
+                                                                          <%  } %>
 
                                                                        
 
@@ -281,7 +279,7 @@
                                                        <div class="row">
                                                             <div class="col-md-12">
                                                                 <!-- DATA TABLE -->
-                                                                <h3 class="title-5 m-b-35">All Users</h3>
+                                                                <h3 class="title-5 m-b-35">All Applicants</h3>
                                                                
                                                                 <div class="table-responsive table-responsive-data2">
                                                                     <table class="table table-data2">
@@ -359,92 +357,7 @@
 
                                                             <!-- end of second panel -->
                                                     </div>
-                                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                                      <!-- last panel -->
-                                                      
-                                                      
-                                                      
-                                                      
-                                                      <div class="row">
-                                                            <div class="col-md-12">
-                                                                <!-- DATA TABLE -->
-                                                                <h3 class="title-5 m-b-35">All Users</h3>
-                                                               
-                                                                <div class="table-responsive table-responsive-data2">
-                                                                    <table class="table table-data2">
-                                                                        <thead>
-                                                                            <tr>
-                                                                              
-                                                                                <th>name</th>
-                                                                                <th>email</th>
-                                                                                <th>Catergory</th>
-                                                                                
-                                                                                <th>Profile Verification</th>
-                                                                                
-                                                                                <th></th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-    
-                                                                            <% allusers.forEach(function(company){ %>
-    
-                                                                                      
-                                                                                <tr class="tr-shadow">
-                                                                            
-                                                                                    <td><%=company.fullname%></td>
-                                                                                    <td>
-                                                                                        <span class="block-email"><%=company.email %></span>
-                                                                                    </td>
-                                                                                    <td class="desc"><%= company.position%></td>
-                                                                                   
-
-                                                                                  
-                                                                                    <td>
-                                                                                        <span class="status--denied">False</span>
-                                                                                    </td>
-                                                                                  
-                                                                                   
-
-
-                                                                                    <td>
-                                                                                        <div class="table-data-feature">
-                                                                                            <button id="sendnot" class="item" data-toggle="tooltip" data-placement="top" name="<%=company.email%>" title="Accept">
-                                                                                                <i class="zmdi zmdi-star"></i>
-                                                                                               
-                                                                                            </button>
-                                                                                            <button id="changeCat" class="item" data-toggle="tooltip" data-placement="top" title="Edit Position">
-                                                                                                <i class="zmdi zmdi-edit"></i>
-                                                                                               
-                                                                                            </button>
-                                                                                            <button id="suspendacc" class="item" data-toggle="tooltip" data-placement="top" title="Suspend">
-                                                                                                <i class="zmdi zmdi-pause"></i>
-                                                                                               
-                                                                                            </button>
-                                                                                            <button class="item" data-toggle="tooltip" data-placement="top" title="View Profile">
-                                                                                                <i class="zmdi zmdi-eye"></i>
-                                                                                                <a href="/explore/viewpage/view/<%=company.email%>"></a>
-                                                                                            </button>
-                                                                                          
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr class="spacer"></tr>
-
-
-                                                                         
-
-    
-                                                                            <%});%>
-                                                                           
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <!-- END DATA TABLE -->
-                                                            </div>
-                                                        </div>
-
-                                                            <!-- end of last panel -->
-                                                    </div>
+                                                   
                                                 </div>
     
                                             </div>
