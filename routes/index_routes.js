@@ -75,26 +75,31 @@ router.post('/recruitform', function(req, res) {
    var age = req.body.age;
    var agePoints;
    if(age<=30 && age>=17){
-    agePoints = 31 - age;//score out of 13
+    agePoints = 31 - parseInt(age);//score out of 13
    }else{
     agePoints = 0;
    }
+
    var numOlevel = req.body.numOlevel;
    var oPointOveral;//score out of max o subjects is 12
    if(numOlevel<5){
     oPointOveral =0;
    }else{
-    oPointOveral = numOlevel; 
+    oPointOveral = parseInt(numOlevel); 
    }
+   console.log("overal:"+oPointOveral);
   
    var mathPass = req.body.mathPass;//score max 6
-   var mathPassPoints = mapSymbol(mathPass);
+   var mathPassPoints = parseInt(mapSymbol(mathPass));
+   console.log("math:"+mathPassPoints);
 
    var engPass = req.body.engPass;//score max 6
-   var engPassPoints = mapSymbol(engPass);
+   var engPassPoints = parseInt(mapSymbol(engPass));
+   console.log("eng:"+engPassPoints);
 
    var sciencePass = req.body.sciencePass;//score max 6
-   var sciencePassPoints = mapSymbol(sciencePass)
+   var sciencePassPoints = parseInt(mapSymbol(sciencePass));
+   console.log("sceince:"+sciencePassPoints);
   
    //max for this is 43
 
@@ -111,7 +116,7 @@ console.log("the percent total percent after ceil"+totalPercent);
    var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Ru7H%cLirrel',
+    password: '1234',
     database: 'job_applicants'
 });
 
@@ -181,7 +186,7 @@ var queryLine = "INSERT INTO applicants (fullname,email,age,nID,address,call_pho
         var connection = mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: 'Ru7H%cLirrel',
+            password: '1234',
             database: 'job_applicants'
         });  
 
