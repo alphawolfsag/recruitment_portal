@@ -97,8 +97,11 @@ router.post('/recruitform', function(req, res) {
    var sciencePassPoints = mapSymbol(sciencePass)
   
    //max for this is 43
-var totalScore = agePoints + oPointOveral + mathPassPoints + engPassPoints + sciencePassPoints;
+
+ var totalScore = agePoints + oPointOveral + mathPassPoints + engPassPoints + sciencePassPoints;
+ console.log("the percent totalscore"+totalScore);
 var totalPercent = Math.ceil((totalScore/43) * 100);
+console.log("the percent total percent after ceil"+totalPercent);
 
     
 
@@ -108,19 +111,19 @@ var totalPercent = Math.ceil((totalScore/43) * 100);
    var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '1234',
+    password: 'Ru7H%cLirrel',
     database: 'job_applicants'
 });
 
 // save data to db
 
-var queryLine = "INSERT INTO applicants (fullname,email,age,nID,address ,call_phone,position," +
+var queryLine = "INSERT INTO applicants (fullname,email,age,nID,address,call_phone,position," +
             "points_acceptable,education,otherQ,abt_yourself,refes)" +
-            " Values(?,?,?,?,?,?,?,?,?,?)";
+            " Values(?,?,?,?,?,?,?,?,?,?,?,?)";
 
         connection.query({
                 sql: queryLine,
-                values: [fullname,email, nID,address ,call_phone,position,totalPercent,education,otherQ,abt_yourself,refes]
+                values: [fullname,email,age,nID,address ,call_phone,position,totalPercent,education,otherQ,abt_yourself,refes]
             },
             function(error, results, fields) {
                 if (error) {
@@ -178,7 +181,7 @@ var queryLine = "INSERT INTO applicants (fullname,email,age,nID,address ,call_ph
         var connection = mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: '1234',
+            password: 'Ru7H%cLirrel',
             database: 'job_applicants'
         });  
 
@@ -241,20 +244,18 @@ var queryLine = "INSERT INTO applicants (fullname,email,age,nID,address ,call_ph
                   transporter.sendMail(mailOptions, function (err, info) {
                      if(err){
                         console.log("Error in Sending Email: "+err);
-                        connection.end();
+                      
                         res.send(">email failed");
                      }
                      else{
                         console.log("Email Sent !!!: "+info);
-                        console.log("Registration Done for : " + req.body.email + " Please check your email");
-                        console.log(results.message);
-                        connection.end();
+                          
                         res.send(">ok");
                      }
 
                   });
 
-            }//end of else
+           
 
 
        } catch (error) {

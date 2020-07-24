@@ -239,7 +239,7 @@
                                                                                                 <i class="zmdi zmdi-star"></i>
                                                                                                
                                                                                             </button>
-                                                                                            <button id="sendemail" class="item" data-toggle="tooltip" data-placement="top" title="Send Email">
+                                                                                            <button id="<%=company.id%>" class="item" data-toggle="tooltip" data-placement="top" title="Send Email">
                                                                                                 <i class="zmdi zmdi-edit"></i>
                                                                                             </button>
                                                                                             <button id="suspendacc" class="item" data-toggle="tooltip" data-placement="top" title="Suspend">
@@ -429,15 +429,63 @@
     </script>
 
 
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 <link rel="stylesheet" href="/fontawesome/js/fontawesome.min.js">
 
 
-
     <!-- Main JS-->
     <script src="/staff_assets/js/main.js"></script>
+    
+
+
+    <% allusers.forEach(function(company){ %>
+    <script>  
+             var mailss = '<%=company.email%>';
+             console.log(mailss);
+$('#<%=company.id%>').click(function () {
+ // var eventId = this.name;
+
+  $.confirm({
+    content: function () {
+        var self = this;
+        return $.ajax({
+      type: "GET",
+      url: "/send/<%=company.email%>",
+      success: function(data)
+      {
+       console.log("Done");
+       
+      }
+    }).done(function (response) {
+            self.setContent("Email To Invite Sent");
+          //  self.setContentAppend('<br>Version: ' + response.version);
+            self.setTitle("Email Sent");
+        }).fail(function(){
+            self.setContent('Sorry, Something Really Went Wrong. Please Try Again');
+            self.setTitle("Failed");
+        });
+    },
+    //end of content
+
+    buttons: {
+           
+           close: function () {
+           }
+       },
+      
+
+      
+    
+  });
+
+});
+    </script>
+ <%});%>
+
+
 
 </body>
 

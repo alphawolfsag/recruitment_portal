@@ -1932,43 +1932,6 @@ $('#viewEvent').click(function () {
 });
 //==================================================================
 
-$('#sendemail').click(function () {
- // var eventId = this.name;
-
-  $.confirm({
-    content: function () {
-        var self = this;
-        return $.ajax({
-      type: "GET",
-      url: "/send/<%=company.email%>",
-      success: function(data)
-      {
-       console.log("Done");
-       
-      }
-    }).done(function (response) {
-            self.setContent("Email To Invite Sent");
-          //  self.setContentAppend('<br>Version: ' + response.version);
-            self.setTitle("Email Sent");
-        }).fail(function(){
-            self.setContent('Sorry, Something Really Went Wrong. Please Try Again');
-            self.setTitle("Failed");
-        });
-    },
-    //end of content
-
-    buttons: {
-           
-           close: function () {
-           }
-       },
-      
-
-      
-    
-  });
-
-})
 //=======================================
 
 
